@@ -107,7 +107,7 @@ tropical flow?*
 Julia (main model, DifferentialEquations.jl with a stiff `Rodas5P` solver):
 
 ```bash
-julia --project=. -e 'using Pkg; Pkg.instantiate()'
+julia --project=. -e 'using Pkg; Pkg.add(["OrdinaryDiffEq","Plots","Roots"])'
 julia --project=. scripts/run_demo.jl
 ```
 

@@ -21,7 +21,7 @@ pilot. Python mirror: python/model_v2.py (same equations and parameters).
 """
 module SubakFilterV2
 
-using DifferentialEquations
+using OrdinaryDiffEq
 using Roots: find_zero, Bisection
 
 export T_IN, T_OUT, O_IN, O_OUT, O_LIMIT, params, simulate, scenarios

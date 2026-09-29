@@ -16,7 +16,7 @@ measurements. They are meant to be replaced by lab/field data from Bali.
 """
 module SubakFilter
 
-using DifferentialEquations
+using OrdinaryDiffEq
 
 export default_params, inflow, simulate, removal_efficiency, breakthrough_day
 

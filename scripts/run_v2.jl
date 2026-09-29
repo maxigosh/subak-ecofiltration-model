@@ -1,5 +1,5 @@
 # Model v2 scenarios and figures. From the repo root:
-#   julia --project=. -e 'using Pkg; Pkg.instantiate()'
+#   julia --project=. -e 'using Pkg; Pkg.add(["OrdinaryDiffEq","Plots","Roots"])'
 #   GKSwstype=100 julia --project=. scripts/run_v2.jl
 include(joinpath(@__DIR__, "..", "src", "SubakFilterV2.jl"))
 using .SubakFilterV2

@@ -1,3 +1,48 @@
+# Model v2 — calibrated on your water tests (Udayana, 16 Aug 2026)
+
+**What the tests show**
+
+| | before | after | change | limit |
+|---|---|---|---|---|
+| Turbidity, NTU | 3.77 | 1.78 | **−53%** | 25 |
+| Organic matter (KMnO4), mg/L | **16.42** | **17.68** | **+8%** | **10** |
+| Nitrate-N, mg/L | 0.943 | 0.999 | +6% | 10 |
+| TDS, mg/L | 164.1 | 163.5 | ≈0 | 1000 |
+| Heavy metals | below detection | below detection | | |
+
+The filter works well **mechanically** (particles, turbidity). **Dissolved organics are not removed** — they even rise slightly — and organic matter is the **only parameter above the limit**. So v2 models the two separately:
+
+* **particles:** capture in every stage, calibrated to the measured −53%;
+* **dissolved organics:** adsorption on biochar (Langmuir), a biofilm that matures over ~3 weeks, **leaching from fresh biochar**, and a refractory share.
+
+![scenarios](figures/v2_organics_scenarios.png)
+
+| Scenario | organics day 20 | organics day 180 | turbidity day 180 |
+|---|---|---|---|
+| A. As built (fitted to your test) | 17.7 | 15.0 | 1.78 |
+| B. Rinsed + charged biochar | 13.9 | 15.0 | 1.78 |
+| C. B + 16 h contact time | 10.4 | **9.5** | 0.40 |
+| D. C + 2× biochar | 9.8 | 9.5 | 0.40 |
+
+![contact time](figures/v2_contact_time.png)
+
+**What it suggests (to be tested):**
+1. **Rinse and charge the biochar before installing** — fresh char releases organics in the first weeks (explains the +8%).
+2. **Contact time, not biochar mass, is the lever.** With ~0.5 h in the biochar stage the biofilm has no time to work; the model needs **~16 h** to bring organics under 10 mg/L. Options: slower flow through a side channel, a bigger/deeper bed, or recirculation (easy in ponds / oyster tanks).
+3. Doubling biochar helps only in the first weeks — adsorption saturates, biology does the long-term work.
+
+**Limits, honestly:** one before/after pair taken at the same moment cannot identify kinetics. Flow, stage volumes and biochar properties are placeholders. Scenario A is fitted, B–D are hypotheses.
+
+**Data to collect at the new pilot (Tabanan) to turn this into a validated tool:**
+* flow rate (m³/h) and water volume of each stage;
+* biochar mass, particle size, feedstock, rinsed/charged or not;
+* samples **in and out at the same water parcel** (out sampled one residence time later), **weekly for 6–8 weeks** from installation: KMnO4/COD, turbidity, nitrate, phosphate, pH, temperature;
+* one storm event sampled if possible.
+
+Run: `python3 python/run_v2.py` (Python mirror) or `GKSwstype=100 julia --project=. scripts/run_v2.jl`.
+
+---
+
 # Subak ecofiltration — first dynamic model (draft)
 
 A first-pass computational model of a three-stage, nature-based filtration

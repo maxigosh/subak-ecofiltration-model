@@ -39,6 +39,8 @@ The filter works well **mechanically** (particles, turbidity). **Dissolved organ
 * samples **in and out at the same water parcel** (out sampled one residence time later), **weekly for 6–8 weeks** from installation: KMnO4/COD, turbidity, nitrate, phosphate, pH, temperature;
 * one storm event sampled if possible.
 
+Verified: Julia 1.13.1 and the Python mirror give identical results (table above).
+
 Run: `python3 python/run_v2.py` (Python mirror) or `GKSwstype=100 julia --project=. scripts/run_v2.jl`.
 
 ---
@@ -107,7 +109,7 @@ tropical flow?*
 Julia (main model, DifferentialEquations.jl with a stiff `Rodas5P` solver):
 
 ```bash
-julia --project=. -e 'using Pkg; Pkg.add(["OrdinaryDiffEq","Plots","Roots"])'
+julia --project=. -e 'using Pkg; Pkg.instantiate()'
 julia --project=. scripts/run_demo.jl
 ```
 

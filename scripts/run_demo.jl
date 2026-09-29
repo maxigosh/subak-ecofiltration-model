@@ -1,6 +1,6 @@
 # Runs the baseline scenario and a configuration comparison, and writes
 # figures to ../figures. Usage (from the repo root):
-#   julia --project=. -e 'using Pkg; Pkg.add(["OrdinaryDiffEq","Plots","Roots"])'
+#   julia --project=. -e 'using Pkg; Pkg.instantiate()'
 #   julia --project=. scripts/run_demo.jl
 include(joinpath(@__DIR__, "..", "src", "SubakFilter.jl"))
 using .SubakFilter

@@ -33,6 +33,8 @@ The filter works well **mechanically** (particles, turbidity). **Dissolved organ
 
 **Limits, honestly:** one before/after pair taken at the same moment cannot identify kinetics. Flow, stage volumes and biochar properties are placeholders. Scenario A is fitted, B–D are hypotheses.
 
+**Field plan for the new pilot (priorities from a sensitivity analysis): see [FIELD_PLAN.md](FIELD_PLAN.md).**
+
 **Data to collect at the new pilot (Tabanan) to turn this into a validated tool:**
 * flow rate (m³/h) and water volume of each stage;
 * biochar mass, particle size, feedstock, rinsed/charged or not;

@@ -1,6 +1,6 @@
 # Field plan — new pilot site (Tabanan)
 
-*Based on a global sensitivity analysis of model v2 (400 Monte Carlo runs, all uncertain inputs varied over realistic ranges; `python3 python/sensitivity_v2.py`).*
+*Based on a global sensitivity analysis of model v2 (400 Monte Carlo runs, all uncertain inputs varied over realistic ranges; computed with the legacy Python mirror `python/sensitivity_v2.py` — to be re-run in Julia before these numbers are used in the grant application).*
 
 ![sensitivity](figures/v2_sensitivity.png)
 

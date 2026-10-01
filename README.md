@@ -43,7 +43,7 @@ The filter works well **mechanically** (particles, turbidity). **Dissolved organ
 
 Verified: Julia 1.13.1 and the Python mirror give identical results (table above).
 
-Run: `python3 python/run_v2.py` (Python mirror) or `GKSwstype=100 julia --project=. scripts/run_v2.jl`.
+Run: `GKSwstype=100 julia --project=. scripts/run_v2.jl`. All results come from Julia (see CLAUDE.md); `python/` is a legacy mirror, not used for results.
 
 ---
 

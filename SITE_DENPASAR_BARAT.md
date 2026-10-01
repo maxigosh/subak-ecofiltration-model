@@ -37,16 +37,16 @@ So the realistic pilot is a **side stream**: divert 1–2 L/min through the medi
 
 ## Model v2 run for this site
 
-Python mirror of model v2 (same equations as the Julia version). Bed: the 20 m reach with a 0.30 m weir (1.7 m³ of pore water in 3 equal stages), rinsed and charged biochar (no leaching), 250 kg biochar in the last stage, particle-capture rate kept from the Udayana calibration. Values on day 180, after the biofilm has matured. Inflow: organics 16.4 mg/L KMnO4, turbidity 3.77 NTU.
+Model runs for this project are done in Julia only. The site run is `scripts/site_denpasar.jl` (same bed and assumptions as the side-stream table above: 20 m reach, 0.30 m weir, rinsed biochar, day 180). Results go here once it has run:
+
+    julia --project=. scripts/site_denpasar.jl
 
 | Flow through the filter | Contact time | Organics, mg/L | Turbidity, NTU |
 |---|---|---|---|
-| Whole channel (0.1 m/s, 31 m³/h) | 0.1 h | 16.4 | 3.72 |
-| Side stream 3.3 L/min | 8.5 h | 12.2 | 0.75 |
-| Side stream 1.8 L/min | 16 h | 9.9 | 0.29 |
-| Side stream 1.0 L/min | 28 h | 7.8 | 0.10 |
-
-At full channel flow the filter does almost nothing for either organics or turbidity. A side stream of about 1.8 L/min or less meets the 10 mg/L limit and cuts turbidity by over 90%. These numbers rest on placeholder kinetics (biofilm rate, biochar capacity) until weekly samples from the pilot calibrate them.
+| Whole channel (0.1 m/s) | — | pending Julia run | pending |
+| Side stream 3.3 L/min | — | pending | pending |
+| Side stream 1.8 L/min | — | pending | pending |
+| Side stream 1.0 L/min | — | pending | pending |
 
 ## Still needed from the site
 

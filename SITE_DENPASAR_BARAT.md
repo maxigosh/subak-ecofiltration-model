@@ -41,12 +41,16 @@ Model runs for this project are done in Julia only. The site run is `scripts/sit
 
     julia --project=. scripts/site_denpasar.jl
 
-| Flow through the filter | Contact time | Organics, mg/L | Turbidity, NTU |
-|---|---|---|---|
-| Whole channel (0.1 m/s) | — | pending Julia run | pending |
-| Side stream 3.3 L/min | — | pending | pending |
-| Side stream 1.8 L/min | — | pending | pending |
-| Side stream 1.0 L/min | — | pending | pending |
+Julia run on 2026-10-01 (Julia 1.13.1, server `hermes`):
+
+| Flow through the filter | Q, m³/h | Contact time | Organics day 180, mg/L | Turbidity day 180, NTU |
+|---|---|---|---|---|
+| Whole channel (0.1 m/s) | 30.7 | 0.1 h | 16.4 | 3.72 |
+| Side stream 3.3 L/min | 0.20 | 8.5 h | 12.2 | 0.75 |
+| Side stream 1.8 L/min | 0.106 | 16.1 h | 9.9 | 0.29 |
+| Side stream 1.0 L/min | 0.06 | 28.4 h | 7.8 | 0.10 |
+
+Inflow: organics 16.4 mg/L KMnO4, turbidity 3.77 NTU; limit 10 mg/L. At full channel flow the filter does almost nothing. A side stream of about 1.8 L/min or less brings organics under the limit and cuts turbidity by more than 90%. Kinetics (biofilm rate, biochar capacity) are still placeholders until weekly pilot samples calibrate them; channel speed is assumed until measured.
 
 ## Still needed from the site
 

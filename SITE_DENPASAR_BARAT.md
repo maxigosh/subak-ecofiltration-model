@@ -52,6 +52,8 @@ Julia run on 2026-10-01 (Julia 1.13.1, server `hermes`):
 
 Inflow: organics 16.4 mg/L KMnO4, turbidity 3.77 NTU; limit 10 mg/L. At full channel flow the filter does almost nothing. A side stream of about 1.8 L/min or less brings organics under the limit and cuts turbidity by more than 90%. Kinetics (biofilm rate, biochar capacity) are still placeholders until weekly pilot samples calibrate them; channel speed is assumed until measured.
 
+![Side-stream scheme](figures/site_denpasar_scheme.png)
+
 ## Still needed from the site
 
 1. **Flow**: float method over the 20 m (time a floating object, 3 runs) → speed × 0.085 m² × 0.8.
